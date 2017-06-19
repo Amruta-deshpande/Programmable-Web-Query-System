@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+
+        body(style='background-color: #2b3e50; color:white;')
+            .topTitle(style='color:orange')
+                | <strong> Mashup Query</strong>
+            .box
+                .container-1
+                    form#searchButton(action='http://localhost:3000/Mashup', method='GET')
+                        <p>
+                        label(for='keyword')<strong> <span> KeyWord : </span></strong>
+                        input#search(type='Search', placeholder='keyword..', name = 'keyword')
+
+                        label(for='apiused')<strong> Api : </strong>
+                        input#search(type='Search', placeholder='api..', name = 'apiused')
+                        =' '
+                        br
+                        <p>
+                        label(for='updated')<strong> Updated Year : </strong>
+                        input#search(type='Search', placeholder='year..', name = 'updated')
+                        =' '
+                        label(for='tag')<strong>Tag : </strong>
+                        input#search(type='Search', placeholder='tag..', name = 'tag')
+                        =' '
+                        <p>
+                        button.searchButton(type='Search', value='Search',style='color:#0084b4') Search
+
+                    table(border='5', width='100%', cellpadding='0', cellspacing='0')
+                        tr(align='CENTER')   
+                            th(colspan='10')
+                                br
+                                h3 Mashup Query          
+                        tr(style='color:orange')
+                            th Select
+                            th Name
+                            th Summary
+                            th Description
+                            th API 
+                            th Tag
+                            th Updated Year
+                        
+                        each item in list
+                            tr(align='CENTER')
+                                td(align='center')
+                                    button
+                                        a(href= "MashupInfo?id=#{item._id}") Select
+                                td  #{item.name}
+                                td #{item.summary}
+                                td #{item.description}
+                                td #{item.api}
+                                td #{item.tag}
+                                td #{item.updated}
+
+
+
+                    

@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title HomePage
+    link(href='js/bootstrap.min.css', rel='stylesheet')
+  body(style='background-color: #2b3e50; color:white;')
+    .container
+      .row.text-center
+        h1(style='color:orange') Web-based Query System 
+      .row.text-center
+        form(action='http://localhost:3000/API')
+          strong
+            input.form-control(type='submit', style='color:#FF9900', value='Search for API Query',align='center')
+        br
+        form(action='http://localhost:3000/Mashup')
+          strong
+            input.form-control(type='submit', style='color:#0084b4', value='Search for Mashup Query',align='center')

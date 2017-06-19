@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  title=apiquery
+  h1= title
+  p Welcome to #{title}
+  #searchQuery
+    fieldset
+      input#inputApicategory(type='text', placeholder='category')
+      input#inputAPititle(type='text', placeholder='title')
+      br
+      button#btnsearchQuery Search Query
+  #wrapper
+    h2 API Query
+    #apiList
+        table
+          thead
+            th title
+            th summary
+            th category
+          tbody
+  
+
+ 
